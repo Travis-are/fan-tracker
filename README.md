@@ -6,7 +6,7 @@ and surfaces where fans publicly report unanswered requests or complaints.
 
 Built with Next.js 14 (App Router), Supabase (PostgreSQL + Auth), and Google
 Gemini for AI classification, entity resolution, sentiment analysis, and
-summarization.
+summarization. 
 
 ## What this is NOT
 
