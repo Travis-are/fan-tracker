@@ -47,7 +47,7 @@ async function getOrCreateCelebrity(
       canonical_name: mentionedName,
       category: 'public_figure',
       is_demo: isDemo,
-    })
+    } as any)
     .select('id')
     .single();
 
