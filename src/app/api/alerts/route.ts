@@ -84,7 +84,7 @@ export async function POST(request: Request) {
       alert_type: parsed.data.alertType,
       threshold_value: parsed.data.thresholdValue,
       status: 'active',
-    })
+    } as any)
     .select('*')
     .single();
 
