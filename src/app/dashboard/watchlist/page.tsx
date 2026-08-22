@@ -54,7 +54,7 @@ export default function WatchlistPage() {
         <Star className="h-5 w-5 text-accent-soft" />
         <div>
           <h1 className="text-xl font-semibold text-white">Watchlist</h1>
-          <p className="text-sm text-muted">Public figures you're tracking closely</p>
+          <p className="text-sm text-muted">Public figures you are tracking closely</p>
         </div>
       </div>
 
