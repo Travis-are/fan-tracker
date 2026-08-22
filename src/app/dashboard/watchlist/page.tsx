@@ -63,7 +63,7 @@ export default function WatchlistPage() {
       ) : items.length === 0 ? (
         <div className="glass-card py-16 text-center">
           <p className="text-sm text-muted">
-            You haven't added any celebrities to your watchlist yet.
+            You have not added any celebrities to your watchlist yet.
           </p>
           <Link
             href="/dashboard/discover"
