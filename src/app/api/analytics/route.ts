@@ -108,7 +108,7 @@ async function recomputeForCelebrity(
       total_discussions: totalDiscussions,
       trend,
       updated_at: new Date().toISOString(),
-    })
+    } as any)
     .eq('id', celebrityId);
 
   return {
