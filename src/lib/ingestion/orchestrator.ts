@@ -133,7 +133,7 @@ async function runLiveIngestion(db: ReturnType<typeof createAdminClient>, jobId:
         model_name: aiProvider.name,
         ai_output: classification as unknown as Record<string, unknown>,
         is_inference: true,
-      });
+      } as any);
     }
   }
 
