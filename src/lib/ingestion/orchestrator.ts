@@ -105,7 +105,7 @@ async function runLiveIngestion(db: ReturnType<typeof createAdminClient>, jobId:
           posted_at: post.postedAt,
           is_demo: false,
           ingestion_job_id: jobId,
-        })
+        } as any)
         .select('id')
         .single();
 
