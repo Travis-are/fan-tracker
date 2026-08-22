@@ -23,7 +23,7 @@ export default function SettingsForm({ initialFullName }: { initialFullName: str
     if (user) {
       await supabase
         .from('user_profiles')
-        .update({ full_name: fullName, updated_at: new Date().toISOString() })
+        .update({ full_name: fullName, updated_at: new Date().toISOString() } as any)
         .eq('id', user.id);
     }
 
