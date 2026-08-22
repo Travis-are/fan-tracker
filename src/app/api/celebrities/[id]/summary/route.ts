@@ -96,7 +96,7 @@ export async function GET(
       model_name: aiProvider.name,
       ai_output: summary as unknown as Record<string, unknown>,
       is_inference: true,
-    });
+    } as any);
 
     return NextResponse.json({ data: summary, cached: false });
   } catch (err) {
