@@ -7,7 +7,7 @@ export default function NotFound() {
       <TrendingUp className="mb-4 h-8 w-8 text-accent-soft" />
       <h1 className="text-2xl font-semibold text-white">Page Not Found</h1>
       <p className="mt-2 max-w-sm text-sm text-muted">
-        The page you're looking for doesn't exist or may have been moved.
+        The page you are looking for does not exist or may have been moved.
       </p>
       <Link
         href="/dashboard"
