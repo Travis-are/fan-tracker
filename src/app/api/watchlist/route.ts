@@ -95,7 +95,7 @@ export async function POST(request: Request) {
 
   const { data, error } = await supabase
     .from('watchlists')
-    .insert({ user_id: user.id, celebrity_id: parsed.data.celebrityId })
+    .insert({ user_id: user.id, celebrity_id: parsed.data.celebrityId } as any)
     .select('id')
     .single();
 
