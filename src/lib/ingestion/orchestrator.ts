@@ -124,7 +124,7 @@ async function runLiveIngestion(db: ReturnType<typeof createAdminClient>, jobId:
         discussion_id: discussion.id,
         sentiment: classification.sentiment.value,
         confidence: classification.sentiment.confidence,
-      });
+      } as any);
 
       await db.from('ai_analysis').insert({
         discussion_id: discussion.id,
