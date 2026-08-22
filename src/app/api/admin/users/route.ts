@@ -22,7 +22,7 @@ async function requireAdmin() {
     .eq('id', user.id)
     .single();
 
-  if (profile?.role !== 'admin') {
+  if ((profile as { role: string } | null)?.role !== 'admin') {
     return { error: NextResponse.json({ error: 'Forbidden' }, { status: 403 }) };
   }
 
