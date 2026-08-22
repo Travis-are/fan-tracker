@@ -113,7 +113,7 @@ export default function SearchPage() {
           {results.celebrities.length === 0 &&
             results.platforms.length === 0 &&
             results.complaintTypes.length === 0 && (
-              <p className="text-sm text-muted">No results found for "{query}".</p>
+              <p className="text-sm text-muted">No results found for &quot;{query}&quot;.</p>
             )}
         </div>
       )}
