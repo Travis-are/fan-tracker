@@ -75,7 +75,7 @@ async function recomputeAllCelebrities(db: ReturnType<typeof createAdminClient>)
         percentages.unansweredPct === 'INSUFFICIENT_DATA' ? null : percentages.unansweredPct,
       complaint_pct:
         percentages.complaintPct === 'INSUFFICIENT_DATA' ? null : percentages.complaintPct,
-    });
+    } as any);
 
     await db.from('trend_metrics').upsert(
       {
