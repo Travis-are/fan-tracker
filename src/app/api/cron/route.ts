@@ -88,7 +88,7 @@ async function recomputeAllCelebrities(db: ReturnType<typeof createAdminClient>)
         unanswered_requests: counts.unansweredCount,
         total_volume: discussionIds.length,
         fan_demand_score: scoreBreakdown.score,
-      },
+      } as any,
       { onConflict: 'celebrity_id,metric_date' }
     );
 
