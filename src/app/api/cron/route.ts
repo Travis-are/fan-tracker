@@ -103,7 +103,7 @@ async function recomputeAllCelebrities(db: ReturnType<typeof createAdminClient>)
         total_discussions: discussionIds.length,
         trend,
         updated_at: new Date().toISOString(),
-      })
+      } as any)
       .eq('id', c.id);
 
     recomputed++;
