@@ -93,7 +93,7 @@ async function recomputeForCelebrity(
       unanswered_requests: counts.unansweredCount,
       total_volume: totalDiscussions,
       fan_demand_score: scoreBreakdown.score,
-    },
+  } as any,
     { onConflict: 'celebrity_id,metric_date' }
   );
 
