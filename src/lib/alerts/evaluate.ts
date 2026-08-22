@@ -67,7 +67,7 @@ export async function evaluateAlerts() {
     if (shouldTrigger) {
       await db
         .from('alerts')
-        .update({ status: 'triggered', last_triggered_at: new Date().toISOString() })
+        .update({ status: 'triggered', last_triggered_at: new Date().toISOString() } as any)
         .eq('id', alert.id);
       triggered++;
     }
