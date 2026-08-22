@@ -212,7 +212,7 @@ export async function runIngestionPipeline() {
         source_type: liveMode ? 'api' : 'demo',
         status: 'active',
         config: { mode: liveMode ? 'live' : 'demo' },
-      },
+      } as any,
       { onConflict: 'id' }
     )
     .select('id')
