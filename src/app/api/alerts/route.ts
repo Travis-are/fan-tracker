@@ -114,7 +114,7 @@ export async function PATCH(request: Request) {
 
   const { data, error } = await supabase
     .from('alerts')
-    .update({ status: parsed.data.status })
+    .update({ status: parsed.data.status } as any)
     .eq('id', parsed.data.alertId)
     .eq('user_id', user.id)
     .select('*')
