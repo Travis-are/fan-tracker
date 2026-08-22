@@ -60,7 +60,7 @@ export async function PATCH(request: Request) {
   const db = createAdminClient();
   const { data, error } = await db
     .from('user_profiles')
-    .update({ role: parsed.data.role, updated_at: new Date().toISOString() })
+    .update({ role: parsed.data.role, updated_at: new Date().toISOString() } as never)
     .eq('id', parsed.data.userId)
     .select('id, email, role')
     .single();
