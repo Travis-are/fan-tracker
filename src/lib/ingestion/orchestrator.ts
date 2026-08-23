@@ -255,14 +255,14 @@ export async function runIngestionPipeline() {
         status: 'failed',
         error_message: err instanceof Error ? err.message : 'Unknown error',
         completed_at: new Date().toISOString(),
-      })
+      } as any)
       .eq('id', job.id);
 
     await db.from('system_logs').insert({
       level: 'error',
       source: 'ingestion_orchestrator',
       message: err instanceof Error ? err.message : 'Unknown ingestion error',
-    });
+    } as any);
 
     throw err;
   }
