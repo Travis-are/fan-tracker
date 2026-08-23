@@ -224,7 +224,7 @@ export async function runIngestionPipeline() {
       data_source_id: source?.id,
       status: 'running',
       started_at: new Date().toISOString(),
-    })
+    } as any)
     .select('id')
     .single();
 
