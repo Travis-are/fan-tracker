@@ -112,9 +112,9 @@ export async function PATCH(request: Request) {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
   }
 
-  const { data, error } = await supabase
-    .from('alerts')
-    .update({ status: parsed.data.status } as any)
+  const { data, error } = await (supabase
+    .from('alerts') as any)
+    .update({ status: parsed.data.status })
     .eq('id', parsed.data.alertId)
     .eq('user_id', user.id)
     .select('*')
