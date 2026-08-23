@@ -244,7 +244,7 @@ export async function runIngestionPipeline() {
         items_processed: result.processed,
         items_created: result.created,
         completed_at: new Date().toISOString(),
-      })
+      } as any)
       .eq('id', job.id);
 
     return { mode: liveMode ? 'live' : 'demo', ...result };
